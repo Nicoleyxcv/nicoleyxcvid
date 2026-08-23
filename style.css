@@ -3,14 +3,15 @@ img {
     height: auto;
     float: left;
     margin-right: 30px;
-    display: flex;
 }
+
 
 h1 {
     text-align: center;
+
     background: linear-gradient(
         90deg,
-       #ff6bcb,
+        #ff6bcb,
         #ff9f68,
         #ffe66d,
         #7bed9f,
@@ -22,11 +23,15 @@ h1 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+
 .dev {
     margin-left: 120px;
     margin-top: -129px;
@@ -38,6 +43,7 @@ body {
 }
 
 @keyframes chatBubble {
+
     0% {
         opacity: 0;
         transform: translate(80px, 50px) scale(0.8);
@@ -52,17 +58,196 @@ body {
         opacity: 1;
         transform: translate(0, 0) scale(1);
     }
+
 }
 
-footer{
+
+.social-text {
+    text-align: center;
+}
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.Instagram,
+.Youtube,
+.Tiktok {
+    display: inline-block;
+    background-color: #dcdbdb;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #b4b3b3;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+
+footer {
     margin-top: auto;
     background-color: #f1f1f1;
     padding: 20px;
     text-align: center;
 }
 
-.social {
+.Instagram:hover,
+.Youtube:hover,
+.Tiktok:hover {
+    background-color: #ffd6f2;
+    color: #d14b9b;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: fit-content;
+    position: fixed;
+    right: 15px;
+    bottom: 60px;
+    padding: 3px;
+    background-color: #dcdbdb;
+    border: 1px solid #b4b3b3;
+    border-radius: 50px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switcher button {
+    border: none;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.theme-switcher button:hover {
+    background-color: #ffd6f2;
+}
+
+/* =========================
+   THEME
+========================= */
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #1c1c1c;
+}
+
+body.dark-mode .dev,
+body.dark-mode .Instagram,
+body.dark-mode .Youtube,
+body.dark-mode .Tiktok,
+body.dark-mode .theme-switcher {
+    background-color: #242424;
+    border-color: #444;
+}
+
+body.dark-mode .Instagram,
+body.dark-mode .Youtube,
+body.dark-mode .Tiktok {
+    color: white;
+}
+
+/* Theme Buttons */
+
+.theme-switcher {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: #dcdbdb;
+    border: 1px solid #b4b3b3;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switcher button {
+    border: none;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.theme-switcher button:hover {
+    background-color: #ffd6f2;
+}
+
+/* Dark Mode Hover */
+
+body.dark-mode .theme-switcher button:hover {
+    background-color: #4a2940;
+}
+body.dark-mode .Instagram:hover,
+body.dark-mode .Youtube:hover,
+body.dark-mode .Tiktok:hover {
+    background-color: #4a2940;
+    color: #ff9fcb;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 30px auto 15px;
+
+    width: 250px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #b4b3b3;
+}
+
+.divider span {
+    margin: 0 10px;
+
+    color: #d14b9b;
+
+    font-size: 14px;
+}
+
+
+.quote {
+    text-align: center;
+
+    font-style: italic;
+
+    color: #666;
+
+    margin: 0 auto 30px;
 }
